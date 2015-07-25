@@ -324,7 +324,9 @@ if(sdcard) { server << "<h2>SD card good</h2><p>";}
 
   server << "</body></html>";
 }
-
+//  an HTML page is read from the SD card and sent.
+//  the page contains special chars preceeded by a dollar sign( to identify them) 
+//  which are replaced in the transmission by the current value of the variable.
 void sendSDpage(WebServer &server){
 char inc;
 char chdol ='$';
